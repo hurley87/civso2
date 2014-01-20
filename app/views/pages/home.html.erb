@@ -1,13 +1,33 @@
 <div class="jumbotron text-center">
 
-	<h1>Promoting civil society around the world.</h1>
+	<h1 id="tagline">Promoting civil society.</h1>
 	<% if user_signed_in? %>
           # do something
      <% else %>
        <p>
-         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
        </p>
   <% end %>     
 
 </div>
+
+<div class="container row">
+        <div class="col-md-4 text-center">
+          <%= image_tag("connect1.png", :alt => "visualize social enterprise") %>
+          <h3>Connect</h3>
+          <p>Network with social sector organizations and thought leaders. </p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-md-4 text-center">
+          <%= image_tag("create.png", :alt => "visualize social enterprise") %>
+          <h3>Create</h3>
+          <p>Pin projects to the map and find help from your local or global community. </p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-md-4 text-center">
+          <%= image_tag("collaborate.png", :alt => "visualize social enterprise") %>
+          <h3>Collaborate</h3>
+          <p>Help solve the world's most pressing social problems by sharing your ideas and joining projects.</p>
+          
+        </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
