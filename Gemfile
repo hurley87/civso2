@@ -37,6 +37,8 @@ gem 'aws-sdk', '~> 1.20.0'
 gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.0'
 
+gem 'will_paginate', '~> 3.0'
+
 group :development, :test do
      gem 'sqlite3'
 end

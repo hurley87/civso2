@@ -1,6 +1,15 @@
-<%= link_to 'Back', projects_path %>
 
-<h1>New Project</h1>
+<div class="jumbotron text-center">
+
+	<h1 id="tagline">Create New Project</h1>
+	
+       <p>
+         <%= link_to 'Back', projects_path, class: "btn btn-success btn-lg" %>
+       </p>
+ 
+
+</div>
+
 
 <%= render 'form' %>
 
