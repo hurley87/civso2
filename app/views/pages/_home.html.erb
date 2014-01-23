@@ -2,7 +2,7 @@
 
 	<h1 id="tagline">Promoting civil society.</h1>
 	<% if user_signed_in? %>
-          # do something
+      <%= link_to 'Create Project', new_project_path, class: "btn btn-success btn-lg" %>
      <% else %>
        <p>
          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>

@@ -1,31 +1,60 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron text-center">
 
-<p>
-  <strong>Headline:</strong>
-  <%= @project.headline %>
-</p>
+	<h1 id="tagline"><%= @project.headline %></h1>
+		<p>
+        	<%= link_to 'Back', projects_path, class: "btn btn-success btn-lg"  %> | <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-success btn-lg"  %>
+			
+       </p>
+    
 
-<%= image_tag @project.image.url(:medium) %>
+</div>
 
-<p>
-  <strong>Location:</strong>
-  <%= @project.location %>
-</p>
+<div class="col-md-4">
 
-<p>
-  <strong>Start Date:</strong>
-  <%= @project.project_on %>
-</p>
+		<h2 class="text-center">Details</h2>
 
-<p>
-  <strong>End Date:</strong>
-  <%= @project.project_end %>
-</p>
+		<%= image_tag @project.image.url(:medium) %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+		<p>
+		  <strong>Location:</strong>
+		  <%= @project.location %>
+		</p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+		<p>
+		  <strong>Start Date:</strong>
+		  <%= @project.project_on %>
+		</p>
+
+		<p>
+		  <strong>End Date:</strong>
+		  <%= @project.project_end %>
+		</p>
+
+		<p>
+		  <strong>Description:</strong>
+		  <%= @project.description %>
+		</p>
+
+</div>	
+
+<div class="col-md-8">
+
+	<h2 class="text-center">Discussion</h2>
+
+	<div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'BYOD'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+
+
+</div>	
+
+
