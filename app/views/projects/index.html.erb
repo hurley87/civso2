@@ -1,41 +1,28 @@
 <h1>Listing projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Headline</th>
-      <th>email</th>
-      <th>Location</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.headline %></td>
-        <td><%= image_tag project.image.url(:medium) %></td>
-        <td><%= project.user.email if project.user %></td>
-        <td><%= project.location %></td>
-        <td><%= project.project_on %></td>
-        <td><%= project.project_end%></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <% if project.user == current_user %>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Project', new_project_path %>
+
+
+<div id="projects" class="transitions-enabled">
+    <% @projects.each do |project| %>
+    <div class="box panel panel-default">
+        <%= project.headline %>
+        <%= image_tag project.image.url(:medium) %>
+        <div class="panel-body">
+        
+        <%= project.user.email if project.user %>
+        <%= project.location %>
+        <%= project.project_on %>
+        <%= project.project_end%>
+        <%= project.description %>
+        <%= link_to 'Show', project %>
+        <% if project.user == current_user %>
+        <%= link_to 'Edit', edit_project_path(project) %></td>
+
+        <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
