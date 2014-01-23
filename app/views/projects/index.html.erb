@@ -19,6 +19,7 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.headline %></td>
+        <td><%= image_tag project.image.url(:medium) %></td>
         <td><%= project.user.email if project.user %></td>
         <td><%= project.location %></td>
         <td><%= project.project_on %></td>
