@@ -12,8 +12,15 @@
 <div class="col-md-4">
 
 		<h2 class="text-center">Details</h2>
+		<br />
+
+		<h4> Created by <%= @project.user.name if @project.user %> </h4>
+
+		<br />
 
 		<%= image_tag @project.image.url(:medium) %>
+
+		<br />
 
 		<p>
 		  <strong>Location:</strong>
