@@ -1,13 +1,26 @@
-<div class="jumbotron text-center">
-
-	<h1 id="tagline"><%= @project.headline %></h1>
-		<p>
+<p>
         	<%= link_to 'Back', projects_path, class: "btn btn-success btn-lg"  %> | <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-success btn-lg"  %>
 			
-       </p>
+    </p>
+
+<div class="jumbotron text-center">
+
+	
+
+	<h1 id="tagline"><%= @project.headline %></h1>
+		
     
 
 </div>
+
+<div class="text-center well">
+
+	<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+
+
+</div>
+
+
 
 <div class="col-md-4">
 
@@ -28,25 +41,22 @@
 		</p>
 
 		<p>
-		  <strong>Start Date:</strong>
+		  <strong>When:</strong>
 		  <%= @project.project_on %>
 		</p>
 
-		<p>
-		  <strong>End Date:</strong>
-		  <%= @project.project_end %>
-		</p>
-
-		<p>
-		  <strong>Description:</strong>
-		  <%= @project.description %>
-		</p>
+		
 
 </div>	
 
 <div class="col-md-8">
 
 	<h2 class="text-center">Discussion</h2>
+
+	<p class="lead">
+		  
+		  <%= @project.description %>
+		</p>
 
 	<div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -64,4 +74,13 @@
 
 </div>	
 
+
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
