@@ -2,7 +2,7 @@
 
 	
 	<% if user_signed_in? %>
-      <h1 id="tagline">YOU JUST EARNED 100 Karma Points!</h1>
+      <h1 id="tagline">YOU JUST EARNED 100 Merit Points!</h1>
       <h2></h2>
        <%= image_tag("connect1.png", :alt => "visualize social enterprise") %>
         <div class="text-center">
@@ -17,9 +17,9 @@
           <h2 id="tagline">Earn more points through projects which are coming soon...</h2>
         </div>
      <% else %>
-        <h1 id="tagline">What Would You Do With Your Karma Points?!</h1>
+        <h1 id="tagline">What Would You Do With Your Merit Points?!</h1>
         <br />
-        <p>Laurel allows you to harness your skill sets and leverage your karma points to help make a change in the community today.</p>
+        <p>Laurel allows you to harness your skill sets and leverage your merit points to help make a change in the community today.</p>
         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg signupfont" %>
         <p>Recieve 100 points on Sign up!</p>
 
