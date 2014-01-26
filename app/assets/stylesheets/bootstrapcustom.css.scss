@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$navbar-inverse-bg: #51a351;
+$navbar-inverse-bg: #ff7700;
 $navbar-inverse-link-color: white;
 $jumbotron-bg: white;
 $navbar-height: 55px;
@@ -8,10 +8,6 @@ $font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 @import 'bootstrap';
 
-#tagline {
-	
-
-}
 
 .btn {
 	margin: 15px;
@@ -25,4 +21,15 @@ nav {
 .navbar-brand {
 	font-size: 1.3em;
 	font-weight: 200;
+}
+
+.signupfont {
+	font-size: 1.5em;
+}
+
+.rankings {
+	background-color: #428bca;
+	border-radius: 15px;
+	color: white;
+	padding: 15px;
 }

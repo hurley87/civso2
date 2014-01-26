@@ -3,12 +3,13 @@ Civso2::Application.routes.draw do
   resources :projects
 
   devise_for :users
+  root "pages#home"
   get "users/:id" => "users#show", as: :user
 
   
   get "about" => "pages#about"
 
-  root "projects#index"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

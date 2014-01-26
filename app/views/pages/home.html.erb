@@ -1,0 +1,55 @@
+<div id="header1" class="jumbotron text-center">
+
+	
+	<% if user_signed_in? %>
+      <h1 id="tagline">YOU JUST EARNED 100 Karma Points!</h1>
+      <h2></h2>
+       <%= image_tag("connect1.png", :alt => "visualize social enterprise") %>
+        <div class="text-center">
+          <h3 class="rankings">Bronze - 250 POINTS</h3>
+          <p>We donate $25 to the charity of your choice.</p>
+          <h3 class="rankings">Silver - 500 POINTS</h3>
+          <p>We give the charity of your choice something they need on your behalf.</p>
+          <h3 class="rankings">Gold  - 1500 POINTS</h3>
+          <p>We set you up to meet the changemaker of your choice.</p>
+          <h3 class="rankings">Platinum - 3000 POINTS</h3>
+          <p>Epic. Find out when you get here. </p>
+          <h2 id="tagline">Earn more points through projects which are coming soon...</h2>
+        </div>
+     <% else %>
+        <h1 id="tagline">What Would You Do With Your Karma Points?!</h1>
+        <br />
+        <p>Laurel allows you to harness your skill sets and leverage your karma points to help make a change in the community today.</p>
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg signupfont" %>
+        <p>Recieve 100 points on Sign up!</p>
+
+
+
+        <br />
+
+        <div class="container row">
+        <div class="col-md-4 text-center">
+          <%= image_tag("heart.jpeg", :alt => "visualize social enterprise") %>
+          <h2>Do Good</h2>
+          <p>Get involved with projects in your community.</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-md-4 text-center">
+          <%= image_tag("star.jpeg", :alt => "visualize social enterprise") %>
+          <h2>Earn Points</h2>
+          <p>Gain karma points through your effort.</p>
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-md-4 text-center">
+          <%= image_tag("thumb.jpeg", :alt => "visualize social enterprise") %>
+          <h2>Level Up</h2>
+          <p>Support the organization of your choice.</p>
+          
+        </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
+
+  <% end %>     
+
+</div>
+
+
